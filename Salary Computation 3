@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); 
+        double basicSalary = scanner.nextDouble(); 
+        scanner.close(); 
+        double hra;
+        double da;
+
+        if (basicSalary < 15000) {
+            hra = 0.15 * basicSalary;
+            da = 0.90 * basicSalary; 
+        } else {
+            hra = 5000;             
+            da = 0.98 * basicSalary; 
+        }
+
+        double grossSalary = basicSalary + hra + da;
+        System.out.printf("%.2f", grossSalary);
+    }
+}
+
