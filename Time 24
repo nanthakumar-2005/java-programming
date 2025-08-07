@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int hours = input.nextInt();
+        int minutes = input.nextInt(); 
+        int seconds = input.nextInt(); 
+
+      
+        int totalSeconds = hours * 3600 + minutes * 60 + seconds;
+
+        
+        int finalHours = totalSeconds / 3600; 
+        totalSeconds %= 3600;
+
+        int finalMinutes = totalSeconds / 60; 
+        int finalSeconds = totalSeconds % 60;
+
+        
+        System.out.println("Total Number of hours is " + finalHours);
+        System.out.println("Total Number of minutes is " + finalMinutes);
+        System.out.println("Total Number of seconds is " + finalSeconds);
+
+        input.close();
+    }
+}
