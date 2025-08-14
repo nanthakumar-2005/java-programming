@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in); 
+
+        String input = scan.nextLine();
+        try {
+            int num = Integer.parseInt(input);
+            if (num <= 0 || num >= 1000000000) { 
+                System.out.println("Invalid Input"); 
+                return; 
+            }
+
+            int reversedNumber = 0; 
+            int originalNumber = num; 
+            while (num != 0) {
+                int digit = num % 10; 
+                reversedNumber = reversedNumber * 10 + digit; 
+                num /= 10; 
+            }
+
+            System.out.println(reversedNumber); 
+
+        } catch (NumberFormatException e) { 
+            System.out.println("Invalid Input");
+        }
+    }
+}
