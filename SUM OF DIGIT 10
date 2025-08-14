@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); 
+        int n = scanner.nextInt(); 
+        scanner.close(); 
+
+        if (n <= 99) {
+            System.out.println("Invalid Input"); 
+        } else {
+            int sum = 0; 
+            while (n != 0) { 
+                int digit = n % 10;
+                sum += digit;
+                n /= 10; 
+            }
+            System.out.println("Sum of digit is " + sum);
+        }
+    }
+}
