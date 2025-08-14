@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int num = scan.nextInt();
+        scan.close();
+        
+        int sumOfDivisors = 0;
+        for (int i = 1; i <= num / 2; i++) {
+            if (num % i == 0) {
+                sumOfDivisors += i;
+            }
+        }
+        
+        if (sumOfDivisors > num) {
+            System.out.println("Abundant Number");
+        } else {
+            System.out.println("Not Abundant Number");
+        }
+    }
+}
